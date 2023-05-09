@@ -11,7 +11,7 @@ export default function App() {
   // loaded es para identificar si la fuente esta cargada o no
   const [loaded] = useFonts({
     // debe estar escrito igual e ingresar la ubicacion + el formato
-    "Prompt-Regular": require("./src/assets/fonts/Prompt-Regular.ttf")
+    "Prompt-Regular": require("./src/assets/fonts/Prompt-Regular.ttf"),
   })
 
   const [userNumber, setUserNumber] = useState();
@@ -20,14 +20,14 @@ export default function App() {
     setUserNumber(selectedNumber);
   };
 
-  let content = <StartGame onStartGame={handleStartGame} />
+  let content = <StartGame onStartGame={handleStartGame} />;
 
   if (userNumber) {
     content = <GameScreen />;
   }
 
   if (!loaded) {
-    return null
+    return null;
   }
 
   return (

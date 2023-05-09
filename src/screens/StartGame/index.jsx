@@ -1,9 +1,9 @@
-import { View, Text, Keyboard, TouchableWithoutFeedback, Button, KeyboardAvoidingView, TouchableOpacity } from 'react-native'
-import { useState } from "react";
-import React from 'react'
-import styles from './styles'
-import Card from '../../components/Card'
-import Input from '../../components/Input'
+import { View, Text, Keyboard, TouchableWithoutFeedback, KeyboardAvoidingView, TouchableOpacity } from "react-native"
+import React, { useState } from "react";
+
+import styles from './styles';
+import Card from '../../components/Card';
+import Input from '../../components/Input';
 
 
 const StartGame = ({ onStartGame }) => {
@@ -18,7 +18,7 @@ const StartGame = ({ onStartGame }) => {
 
   const handleResetInput = () => {
     setValue("");
-    setConfirm(false)
+    setConfirm(false);
   };
 
   const handleConfirmation = () => {
@@ -44,11 +44,11 @@ const StartGame = ({ onStartGame }) => {
             <Text style={styles.subtitle}> Ingresa un numero para comenzar! </Text>
             <Input
               blurOnSubmit
-              autoCapitalize='none'
+              autoCapitalize="none"
               autoCorrect={false}
-              keyboardType={'numeric'}
-              maxLenght={3}
-              placeHolder="your Number"
+              eyboardType="numeric"
+              maxLenght={2}
+              placeHolder="Su numero"
               value={value}
               onChangeText={handleInput}
             />
@@ -79,9 +79,11 @@ const StartGame = ({ onStartGame }) => {
                 <Text style={styles.textSelectedNumber}> {selectedNumber} </Text>
               </View>
               <View style={styles.buttonContainerConfirm}>
+
                 <TouchableOpacity
                   style={styles.startGameButton}
-                  onPress={() => onStartGame(selectedNumber)}>
+                  onPress={() => onStartGame(selectedNumber)}
+                >
                   <Text style={styles.buttonText}>Comenzar</Text>
                 </TouchableOpacity>
 
@@ -90,7 +92,7 @@ const StartGame = ({ onStartGame }) => {
           )}
         </View>
       </TouchableWithoutFeedback>
-    </KeyboardAvoidingView >
+    </KeyboardAvoidingView>
   )
 }
 

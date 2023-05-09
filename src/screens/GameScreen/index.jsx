@@ -1,14 +1,15 @@
 import { View, Text, Button } from 'react-native'
-import React, { useEffect, useState } from 'react'
-import Card from '../../components/Card'
-import styles from './styles'
+import React, { useEffect, useState } from "react";
+
+import Card from '../../components/Card';
+import styles from './styles';
 
 const GameScreen = () => {
     const [currentGuess, setCurrentGuess] = useState();
 
     useEffect(() => {
         setCurrentGuess(Math.floor(Math.random() * (99 - 1) + 1))
-    }, [])
+    }, []);
 
     return (
         <View style={styles.container}>
