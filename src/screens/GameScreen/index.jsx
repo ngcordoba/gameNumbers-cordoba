@@ -1,4 +1,4 @@
-import { View, Text, Button } from 'react-native'
+import { View, Text, Button, TouchableOpacity } from 'react-native'
 import React, { useEffect, useState } from "react";
 
 import Card from '../../components/Card';
@@ -12,17 +12,28 @@ const GameScreen = () => {
     }, []);
     return (
         <View style={styles.container}>
-            <Text style={styles.textColor}>La suposicion del oponente es</Text>
-            <Text style={styles.textColor}>{currentGuess}</Text>
-            <Card otherStyles={styles.buttonContainer}>
-                <Button
-                    title='Lower'
-                    onPress={() => console.log('Lower')} />
+            <Text style={styles.textTitle}>La suposicion del oponente es</Text>
+            <Text style={styles.numberSelected}>{currentGuess}</Text>
+            <View style={styles.container}>
+                <Card>
+                    <Text style={styles.subtitle}>¿El numero es mayor o menor?</Text>
+                    <View style={styles.buttonContainer}>
+                        <TouchableOpacity
+                            style={styles.buttonLower}
+                            onPress={() => console.log('Lower')}>
+                            <Text>Mas bajo</Text>
+                        </TouchableOpacity>
 
-                <Button
-                    title='Higher'
-                    onPress={() => console.log('Higher')} />
-            </Card>
+                        <TouchableOpacity
+                            style={styles.buttonHigh}
+                            onPress={() => console.log('Higher')}>
+                            <Text>Mas alto</Text>
+                        </TouchableOpacity>
+
+                    </View>
+                </Card>
+
+            </View>
         </View>
     )
 }
