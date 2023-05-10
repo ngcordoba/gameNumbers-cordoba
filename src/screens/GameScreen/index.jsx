@@ -10,7 +10,6 @@ const GameScreen = () => {
     useEffect(() => {
         setCurrentGuess(Math.floor(Math.random() * (99 - 1) + 1))
     }, []);
-
     return (
         <View style={styles.container}>
             <Text style={styles.textColor}>La suposicion del oponente es</Text>

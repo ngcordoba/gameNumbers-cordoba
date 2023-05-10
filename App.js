@@ -2,7 +2,7 @@ import { StyleSheet, View } from 'react-native';
 import Header from './src/components/Header';
 import StartGame from './src/screens/StartGame';
 import { useState } from 'react';
-import GameScreen from './src/screens/StartGame'
+import GameScreen from './src/screens/GameScreen'
 import { useFonts } from 'expo-font';
 
 
