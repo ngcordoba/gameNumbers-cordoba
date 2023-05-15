@@ -39,7 +39,9 @@ const styles = StyleSheet.create({
     },
 
     buttonHigh: {
-        width: 100,
+        width: "40%",
+        minWidth: 100,
+        maxWidth: 100,
         height: 35,
         justifyContent: "center",
         backgroundColor: colors.startColor,
@@ -48,10 +50,12 @@ const styles = StyleSheet.create({
     },
 
     buttonLower: {
-        width: 100,
+        width: "40%",
+        minWidth: 100,
+        maxWidth: 100,
         height: 35,
         justifyContent: "center",
-        backgroundColor: colors.actionColor,
+        backgroundColor: colors.red,
         alignItems: "center",
         borderRadius: 10,
     }

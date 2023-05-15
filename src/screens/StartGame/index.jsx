@@ -1,9 +1,12 @@
-import { View, Text, Keyboard, TouchableWithoutFeedback, KeyboardAvoidingView, TouchableOpacity } from "react-native"
+import { View, Text, Keyboard, TouchableWithoutFeedback, KeyboardAvoidingView, TouchableOpacity, Dimensions } from "react-native"
 import React, { useState } from "react";
 
 import styles from './styles';
 import Card from '../../components/Card';
 import Input from '../../components/Input';
+
+// Window toma las dimensiones de la aplicacion sin tomar el espacio de hora y bateria
+const { width, heigh } = Dimensions.get("window")
 
 
 const StartGame = ({ onStartGame }) => {

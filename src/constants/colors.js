@@ -5,5 +5,6 @@ export default {
     disableColor: '#272638',
     startColor: '#117d34',
     black: '#000',
-    white: '#FFF'
+    white: '#FFF',
+    red: "#b02c33"
 };

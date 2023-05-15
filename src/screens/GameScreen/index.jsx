@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import Card from '../../components/Card';
 import styles from './styles';
 
-const GameScreen = () => {
+const GameScreen = ({ handleResult }) => {
     const [currentGuess, setCurrentGuess] = useState();
 
     useEffect(() => {
@@ -20,14 +20,14 @@ const GameScreen = () => {
                     <View style={styles.buttonContainer}>
                         <TouchableOpacity
                             style={styles.buttonLower}
-                            onPress={() => console.log('Lower')}>
-                            <Text>Mas bajo</Text>
+                            onPress={() => handleResult("lower", currentGuess)}>
+                            <Text style={styles.textTitle}>Mas bajo</Text>
                         </TouchableOpacity>
 
                         <TouchableOpacity
                             style={styles.buttonHigh}
-                            onPress={() => console.log('Higher')}>
-                            <Text>Mas alto</Text>
+                            onPress={() => handleResult("higher", currentGuess)}>
+                            <Text style={styles.textTitle}>Mas alto</Text>
                         </TouchableOpacity>
 
                     </View>
